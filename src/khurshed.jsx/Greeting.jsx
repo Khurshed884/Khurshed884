@@ -1,7 +1,7 @@
 
-function Greeting() {
+// function Greeting() {
 
-    return <h1>Hello, Khurshed!</h1>;
-    }
-    export default Greeting;
+//     return <h1 class = "main">Hello, Khurshed Welcome to React App!</h1>;
+//     }
+//     export default Greeting;
     

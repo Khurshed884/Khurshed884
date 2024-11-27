@@ -1,17 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import Greeting from './khurshed.jsx/Greeting';
-import Header from './khurshed.jsx/header';
-import Footer from './khurshed.jsx/footer';
+import React from 'react';
+import './Style/App.css'; // Import global styles
+import Navbar from './khurshed.jsx/Navbar';
+import LandingPage  from './khurshed.jsx/LandingPage.jsx';
 function App() {
-  return (
-    <div className="App">
-      
- <Greeting/>
- <Header/>
- <Footer/>
-    </div>
-  );
+return (
+<div>
+<Navbar />
+<LandingPage />
+</div>
+);
 }
-
 export default App;
