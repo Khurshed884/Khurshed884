@@ -1,15 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 import Greeting from './khurshed.jsx/Greeting';
-import Header from './khurshed.jsx/header';
-import Footer from './khurshed.jsx/footer';
+import Messages from './khurshed.jsx/Messages';
+import Statistics from './khurshed.jsx/Statistics';
+
 function App() {
+  // User Data Object
+  const user1 = {
+    name: "Khurshed Ahmed ",
+    email: "khurshedahmedbanglani@gmail.com",
+    role: "Developer",
+   // profilePicture: "https://via.placeholder.com/150"
+  };
+
+  // Statistics Object
+  const statistics1 = {
+    projectsCompleted: 8,
+    hoursWorked: 25,
+    bugsFixed: 45
+  };
+
+  // Messages Array
+  const messages1 = {
+    msg1:"Welcome to the dashboard!",
+    msg2:"Your next project deadline is approaching.",
+  };
+
   return (
-    <div className="App">
-      
- <Greeting/>
- <Header/>
- <Footer/>
+    <div>
+      <Greeting user={user1} />
+      <Statistics stats={statistics1} />
+      <Messages messages={messages1}/>
     </div>
   );
 }

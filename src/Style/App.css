@@ -1,0 +1,157 @@
+/* General Reset and Body Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f4f7fa, #e1e9f2);
+  color: #333;
+  padding: 20px;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card Styles for Components */
+.user-info,
+.statistics,
+.messages {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.user-info:hover,
+.statistics:hover,
+.messages:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* User Info Styling */
+.user-info img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #f1f1f1;
+}
+
+.user-info h2 {
+  font-size: 26px;
+  color: #2c3e50;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.user-info p {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin: 8px 0;
+}
+
+.user-info .role {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #fff;
+  background-color: #3498db;  /* Default role color */
+  display: inline-block;
+}
+
+/* Custom Role Colors */
+.user-info .Administrator {
+  background-color: #e74c3c;
+}
+
+.user-info .Developer {
+  background-color: #2ecc71;
+}
+
+.user-info .Manager {
+  background-color: #f39c12;
+}
+
+/* Statistics Section */
+.statistics h2 {
+  font-size: 24px;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.statistics ul {
+  list-style: none;
+  padding: 0;
+}
+
+.statistics li {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #7f8c8d;
+}
+
+.progress-bar {
+  margin-top: 20px;
+}
+
+.progress-bar label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.progress-bar div {
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar div > div {
+  height: 100%;
+  background-color: #3498db;
+  transition: width 0.3s ease;
+}
+
+/* Messages Section */
+.messages h2 {
+  font-size: 24px;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.messages ul {
+  list-style: none;
+  padding: 0;
+}
+
+.messages li {
+  background: #ffffff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.messages li:hover {
+  background-color: #ecf0f1;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+}
